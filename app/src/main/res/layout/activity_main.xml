@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.she.customview.slidedeletelistview.MainActivity">
+
+   <com.she.customview.slidedeletelistview.SlideListView
+       android:id="@+id/list"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:background="#fff4f7f9"
+       android:cacheColorHint="#00000000"
+       android:divider="#dddbdb"
+       android:dividerHeight="1.0px"
+       android:drawSelectorOnTop="false"
+       android:listSelector="#00000000"
+       android:scrollbars="none"
+       android:scrollingCache="false">
+
+   </com.she.customview.slidedeletelistview.SlideListView>
+</RelativeLayout>

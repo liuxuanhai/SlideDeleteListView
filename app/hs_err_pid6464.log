@@ -1,0 +1,167 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (malloc) failed to allocate 1048576 bytes for AllocateHeap
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   In 32 bit mode, the process size limit was hit
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Use 64 bit Java on a 64 bit OS
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (memory/allocation.inline.hpp:62), pid=6464, tid=7692
+#
+# JRE version:  (8.0_25-b18) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (25.25-b02 mixed mode windows-amd64 compressed oops)
+# Failed to write core dump. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000000004af000):  JavaThread "Unknown thread" [_thread_in_vm, id=7692, stack(0x00000000026f0000,0x00000000027f0000)]
+
+Stack: [0x00000000026f0000,0x00000000027f0000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x31667a]
+V  [jvm.dll+0x267073]
+V  [jvm.dll+0x267cb3]
+V  [jvm.dll+0x25f5b5]
+V  [jvm.dll+0x3aa31f]
+V  [jvm.dll+0x3d5f12]
+V  [jvm.dll+0x3d629a]
+V  [jvm.dll+0x3d1967]
+V  [jvm.dll+0xe53f2]
+V  [jvm.dll+0x1f9b19]
+V  [jvm.dll+0x22b2e4]
+V  [jvm.dll+0x14d571]
+C  [java.exe+0x20b6]
+C  [java.exe+0xc9bb]
+C  [java.exe+0xca4f]
+C  [kernel32.dll+0x1652d]
+C  [ntdll.dll+0x2c521]
+
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+
+Other Threads:
+
+=>0x00000000004af000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=7692, stack(0x00000000026f0000,0x00000000027f0000)]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap:
+ PSYoungGen      total 38400K, used 665K [0x00000000eab00000, 0x00000000ed580000, 0x0000000100000000)
+  eden space 33280K, 2% used [0x00000000eab00000,0x00000000eaba6670,0x00000000ecb80000)
+  from space 5120K, 0% used [0x00000000ed080000,0x00000000ed080000,0x00000000ed580000)
+  to   space 5120K, 0% used [0x00000000ecb80000,0x00000000ecb80000,0x00000000ed080000)
+ ParOldGen       total 87552K, used 0K [0x00000000c0000000, 0x00000000c5580000, 0x00000000eab00000)
+  object space 87552K, 0% used [0x00000000c0000000,0x00000000c0000000,0x00000000c5580000)
+ Metaspace       used 674K, capacity 4480K, committed 4480K, reserved 1056768K
+  class space    used 66K, capacity 384K, committed 384K, reserved 1048576K
+
+Card table byte_map: [0x0000000011bb0000,0x0000000011dc0000] byte_map_base: 0x00000000115b0000
+
+Marking Bits: (ParMarkBitMap*) 0x0000000060e8d490
+ Begin Bits: [0x0000000012a90000, 0x0000000013a90000)
+ End Bits:   [0x0000000013a90000, 0x0000000014a90000)
+
+Polling page: 0x0000000000430000
+
+CodeCache: size=245760Kb used=327Kb max_used=327Kb free=245432Kb
+ bounds [0x00000000027f0000, 0x0000000002a60000, 0x00000000117f0000]
+ total_blobs=56 nmethods=0 adapters=37
+ compilation: enabled
+
+Compilation events (0 events):
+No events
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (10 events):
+Event: 0.014 loading class java/lang/Short
+Event: 0.014 loading class java/lang/Short done
+Event: 0.014 loading class java/lang/Integer
+Event: 0.014 loading class java/lang/Integer done
+Event: 0.014 loading class java/lang/Long
+Event: 0.014 loading class java/lang/Long done
+Event: 0.015 loading class java/lang/NullPointerException
+Event: 0.015 loading class java/lang/NullPointerException done
+Event: 0.015 loading class java/lang/ArithmeticException
+Event: 0.015 loading class java/lang/ArithmeticException done
+
+
+Dynamic libraries:
+0x000000013f9a0000 - 0x000000013f9d4000 	C:\Program Files\Java\jdk1.8.0_25\bin\java.exe
+0x0000000077700000 - 0x00000000778a9000 	C:\Windows\SYSTEM32\ntdll.dll
+0x00000000775e0000 - 0x00000000776ff000 	C:\Windows\system32\kernel32.dll
+0x000007fefd700000 - 0x000007fefd76b000 	C:\Windows\system32\KERNELBASE.dll
+0x000007fefda20000 - 0x000007fefdafb000 	C:\Windows\system32\ADVAPI32.dll
+0x000007feff7c0000 - 0x000007feff85f000 	C:\Windows\system32\msvcrt.dll
+0x000007feff7a0000 - 0x000007feff7bf000 	C:\Windows\SYSTEM32\sechost.dll
+0x000007fefde10000 - 0x000007fefdf3d000 	C:\Windows\system32\RPCRT4.dll
+0x00000000774e0000 - 0x00000000775da000 	C:\Windows\system32\USER32.dll
+0x000007feff690000 - 0x000007feff6f7000 	C:\Windows\system32\GDI32.dll
+0x000007fefefb0000 - 0x000007fefefbe000 	C:\Windows\system32\LPK.dll
+0x000007fefdb20000 - 0x000007fefdbe9000 	C:\Windows\system32\USP10.dll
+0x000007fefbe30000 - 0x000007fefc024000 	C:\Windows\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.7601.17514_none_fa396087175ac9ac\COMCTL32.dll
+0x000007fefdd80000 - 0x000007fefddf1000 	C:\Windows\system32\SHLWAPI.dll
+0x000007feff9e0000 - 0x000007feffa0e000 	C:\Windows\system32\IMM32.DLL
+0x000007fefdf40000 - 0x000007fefe049000 	C:\Windows\system32\MSCTF.dll
+0x0000000073da0000 - 0x0000000073e72000 	C:\Program Files\Java\jdk1.8.0_25\jre\bin\msvcr100.dll
+0x00000000606b0000 - 0x0000000060f0a000 	C:\Program Files\Java\jdk1.8.0_25\jre\bin\server\jvm.dll
+0x000007fef64f0000 - 0x000007fef64f9000 	C:\Windows\system32\WSOCK32.dll
+0x000007fefdd30000 - 0x000007fefdd7d000 	C:\Windows\system32\WS2_32.dll
+0x000007fefde00000 - 0x000007fefde08000 	C:\Windows\system32\NSI.dll
+0x000007fefb430000 - 0x000007fefb46b000 	C:\Windows\system32\WINMM.dll
+0x00000000778d0000 - 0x00000000778d7000 	C:\Windows\system32\PSAPI.DLL
+0x00000000677b0000 - 0x00000000677bf000 	C:\Program Files\Java\jdk1.8.0_25\jre\bin\verify.dll
+0x0000000065730000 - 0x0000000065758000 	C:\Program Files\Java\jdk1.8.0_25\jre\bin\java.dll
+0x0000000065770000 - 0x0000000065786000 	C:\Program Files\Java\jdk1.8.0_25\jre\bin\zip.dll
+0x000007fef5b70000 - 0x000007fef5c95000 	C:\Windows\system32\dbghelp.dll
+
+VM Arguments:
+jvm_args: -Djava.awt.headless=true -Xmx1024M -Dfile.encoding=GBK -Duser.country=CN -Duser.language=zh -Duser.variant 
+java_command: com.android.dx.command.Main --dex --force-jumbo --num-threads=4 --output D:\Demo\customView\SlideDeleteListView\app\build\intermediates\pre-dexed\debug\internal_impl-24.1.0_275a5c1b0ab984cbcc8eb0d459cfaef3932e434b.jar D:\Demo\customView\SlideDeleteListView\app\build\intermediates\exploded-aar\com.android.support\support-v4\24.1.0\jars\libs\internal_impl-24.1.0.jar
+java_class_path (initial): D:\sdk\build-tools\24.0.0\lib\dx.jar
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk1.8.0_25
+CLASSPATH=.;C:\Program Files\Java\jdk1.8.0_25\lib;C:\Program Files\Java\jdk1.8.0_25\lib\dt.jar;C:\Program Files\Java\jdk1.8.0_25\lib\tools.jar
+PATH=C:\ProgramData\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files\Java\jdk1.8.0_25\bin;C:\Program Files\Java\jdk1.8.0_25\jre\bin;C:\Program Files\TortoiseSVN\bin;D:\sdk\ndk-bundle;D:\dev-tools\apache\apache-maven-3.3.9\bin;D:\Program Files\VisualSVN Server\bin;D:\sdk\ndk-bundle;
+USERNAME=Administrator
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 7 , 64 bit Build 7601 Service Pack 1
+
+CPU:total 8 (4 cores per cpu, 2 threads per core) family 6 model 60 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, rtm, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2
+
+Memory: 4k page, physical 8269256k(1502740k free), swap 8267408k(3284k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (25.25-b02) for windows-amd64 JRE (1.8.0_25-b18), built on Oct  7 2014 14:25:37 by "java_re" with MS VC++ 10.0 (VS2010)
+
+time: Wed Aug 24 18:14:06 2016
+elapsed time: 0 seconds (0d 0h 0m 0s)
+
